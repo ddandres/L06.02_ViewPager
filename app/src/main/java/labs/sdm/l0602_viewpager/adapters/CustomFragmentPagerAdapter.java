@@ -21,7 +21,7 @@ import labs.sdm.l0602_viewpager.fragments.SignInFragment;
  */
 public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    Context context;
+    private Context context;
 
     public CustomFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
@@ -35,7 +35,7 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Fragment result = null;
 
-        switch(position) {
+        switch (position) {
             case 0:
                 result = LogInFragment.newInstance("David");
                 break;
@@ -65,7 +65,7 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
      */
     @Override
     public CharSequence getPageTitle(int position) {
-        switch(position) {
+        switch (position) {
             case 0:
                 return (context.getResources().getString(R.string.title_login_fragment));
             case 1:
