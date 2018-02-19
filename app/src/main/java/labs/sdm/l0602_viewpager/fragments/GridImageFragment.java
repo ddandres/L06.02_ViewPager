@@ -50,7 +50,7 @@ public class GridImageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Get a reference to the GridView in charge of displaying the List of Drawables
-        GridView grid = (GridView) inflater.inflate(R.layout.fragment_grid_images, null);
+        GridView grid = (GridView) inflater.inflate(R.layout.fragment_grid_images, container, false);
         // Create an instance of the custom grid adapter
         adapter = new GridImageAdapter(getContext());
         // Associate the adapter to the GridView

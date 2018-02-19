@@ -2,48 +2,65 @@
   ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".activities.DashboardActivity">
 
 
     <Button
         android:id="@+id/bViewPager"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:onClick="buttonClicked"
-        android:text="@string/button_view_pager" />
+        android:text="@string/button_view_pager"
+        app:layout_constraintBottom_toTopOf="@+id/bViewPagerTitleStrip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bViewPagerTitleStrip"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:onClick="buttonClicked"
-        android:text="@string/button_view_pager_title_strip" />
+        android:text="@string/button_view_pager_title_strip"
+        app:layout_constraintBottom_toTopOf="@+id/bViewPagerTabStrip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bViewPager" />
 
     <Button
         android:id="@+id/bViewPagerTabStrip"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:onClick="buttonClicked"
-        android:text="@string/button_view_pager_tab_strip" />
+        android:text="@string/button_view_pager_tab_strip"
+        app:layout_constraintBottom_toTopOf="@+id/bViewPagerTabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bViewPagerTitleStrip" />
 
     <Button
         android:id="@+id/bViewPagerTabLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:onClick="buttonClicked"
-        android:text="@string/button_view_pager_tab_layout" />
+        android:text="@string/button_view_pager_tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bViewPagerTabStrip" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

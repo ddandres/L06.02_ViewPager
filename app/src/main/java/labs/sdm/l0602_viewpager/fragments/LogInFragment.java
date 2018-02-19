@@ -74,7 +74,7 @@ public class LogInFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, null);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
         // Update the user name according to the obtained argument
         EditText etUser = (EditText) view.findViewById(R.id.etUserName);
         etUser.setText(userName);

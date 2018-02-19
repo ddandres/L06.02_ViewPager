@@ -31,7 +31,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_pager);
 
         // Get a reference to the ViewPager
-        pager = (ViewPager) findViewById(R.id.pager);
+        pager = findViewById(R.id.pager);
         // Create a new PageAdapter and associate it to the ViewPager
         pager.setAdapter(new CustomFragmentPagerAdapter(getSupportFragmentManager(), this));
 
@@ -89,7 +89,7 @@ public class ViewPagerActivity extends AppCompatActivity {
             * */
             case DashboardActivity.TAB_LAYOUT:
                 // Get a reference to the TabLayout component
-                TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+                TabLayout tabLayout = findViewById(R.id.tabLayout);
                 // Make it visible
                 tabLayout.setVisibility(View.VISIBLE);
                 // Associate the TabLayout with the ViewPager,
