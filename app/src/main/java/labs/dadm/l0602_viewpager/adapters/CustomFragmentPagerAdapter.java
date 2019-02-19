@@ -2,18 +2,18 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0602_viewpager.adapters;
+package labs.dadm.l0602_viewpager.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import labs.sdm.l0602_viewpager.R;
-import labs.sdm.l0602_viewpager.fragments.GridImageFragment;
-import labs.sdm.l0602_viewpager.fragments.ListStringFragment;
-import labs.sdm.l0602_viewpager.fragments.LogInFragment;
-import labs.sdm.l0602_viewpager.fragments.SignInFragment;
+import labs.dadm.l0602_viewpager.R;
+import labs.dadm.l0602_viewpager.fragments.GridImageFragment;
+import labs.dadm.l0602_viewpager.fragments.ListStringFragment;
+import labs.dadm.l0602_viewpager.fragments.LogInFragment;
+import labs.dadm.l0602_viewpager.fragments.SignInFragment;
 
 /**
  * Maintains each page as a Fragment that is kept in the FragmentManager.

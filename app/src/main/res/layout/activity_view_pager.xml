@@ -11,7 +11,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="labs.sdm.l0602_viewpager.activities.ViewPagerActivity">
+    tools:context=".activities.ViewPagerActivity">
 
     <!--Component used to display the titles of the ViewPager-->
     <!--Its visibility is set to "gone", so it could be made visible when required-->

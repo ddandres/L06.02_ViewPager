@@ -2,7 +2,7 @@
  * Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
  */
 
-package labs.sdm.l0602_viewpager.activities;
+package labs.dadm.l0602_viewpager.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -14,8 +14,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import labs.sdm.l0602_viewpager.R;
-import labs.sdm.l0602_viewpager.adapters.CustomFragmentPagerAdapter;
+import labs.dadm.l0602_viewpager.R;
+import labs.dadm.l0602_viewpager.adapters.CustomFragmentPagerAdapter;
 
 /**
  * Displays different Fragments using a ViewPager to enable lateral navigation (swipe).
@@ -36,11 +36,11 @@ public class ViewPagerActivity extends AppCompatActivity {
         pager.setAdapter(new CustomFragmentPagerAdapter(getSupportFragmentManager(), this));
 
         /*
-        * Used to create the layout parameters for Views added to the ViewPager
-        *   android:layout_width = "match_parent"
-        *   android:layout_width = "wrap_content"
-        *   android:layout_gravity="top"
-        * */
+         * Used to create the layout parameters for Views added to the ViewPager
+         *   android:layout_width = "match_parent"
+         *   android:layout_width = "wrap_content"
+         *   android:layout_gravity="top"
+         * */
         ViewPager.LayoutParams params = new ViewPager.LayoutParams();
         params.width = ViewGroup.LayoutParams.MATCH_PARENT;
         params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -54,14 +54,14 @@ public class ViewPagerActivity extends AppCompatActivity {
                 break;
 
             /*
-            * Use a TitleStrip to display the labels. It is not interactive.
-            * It is added to the ViewPager by code, although it could also be directly included
-            * in the layout as follows:
-            *   <android.support.v4.view.PagerTitleStrip
-            *      android:id="@+id/titleStrip"
-            *      android:layout_width="match_parent"
-            *      android:layout_height="wrap_content" />
-            * */
+             * Use a TitleStrip to display the labels. It is not interactive.
+             * It is added to the ViewPager by code, although it could also be directly included
+             * in the layout as follows:
+             *   <android.support.v4.view.PagerTitleStrip
+             *      android:id="@+id/titleStrip"
+             *      android:layout_width="match_parent"
+             *      android:layout_height="wrap_content" />
+             * */
             case DashboardActivity.TITLE_STRIP:
                 // Add a TitleStrip to the ViewPager with the required parameters
                 // Titles are provided by the associated PagerAdapter
@@ -69,14 +69,14 @@ public class ViewPagerActivity extends AppCompatActivity {
                 break;
 
             /*
-            * Use a TabStrip to display the labels. It is interactive.
-            * It is added to the ViewPager by code, although it could also be directly included
-            * in the layout as follows:
-            *   <android.support.v4.view.PagerTitleStrip
-            *      android:id="@+id/tabStrip"
-            *      android:layout_width="match_parent"
-            *      android:layout_height="wrap_content" />
-            * */
+             * Use a TabStrip to display the labels. It is interactive.
+             * It is added to the ViewPager by code, although it could also be directly included
+             * in the layout as follows:
+             *   <android.support.v4.view.PagerTitleStrip
+             *      android:id="@+id/tabStrip"
+             *      android:layout_width="match_parent"
+             *      android:layout_height="wrap_content" />
+             * */
             case DashboardActivity.TAB_STRIP:
                 // Add a TabStrip to the ViewPager with the required parameters
                 // Titles are provided by the associated PagerAdapter
@@ -84,9 +84,9 @@ public class ViewPagerActivity extends AppCompatActivity {
                 break;
 
             /*
-            * Use a TabLayout to display the labels. It is interactive.
-            * It is has been directly included in the layout, but as an invisible component.
-            * */
+             * Use a TabLayout to display the labels. It is interactive.
+             * It is has been directly included in the layout, but as an invisible component.
+             * */
             case DashboardActivity.TAB_LAYOUT:
                 // Get a reference to the TabLayout component
                 TabLayout tabLayout = findViewById(R.id.tabLayout);
