@@ -5,14 +5,17 @@
 package labs.dadm.l0602_viewpager.activities;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerTabStrip;
-import android.support.v4.view.PagerTitleStrip;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerTabStrip;
+import androidx.viewpager.widget.PagerTitleStrip;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import labs.dadm.l0602_viewpager.R;
 import labs.dadm.l0602_viewpager.adapters.CustomFragmentPagerAdapter;
@@ -33,7 +36,10 @@ public class ViewPagerActivity extends AppCompatActivity {
         // Get a reference to the ViewPager
         pager = findViewById(R.id.pager);
         // Create a new PageAdapter and associate it to the ViewPager
-        pager.setAdapter(new CustomFragmentPagerAdapter(getSupportFragmentManager(), this));
+        pager.setAdapter(new CustomFragmentPagerAdapter(
+                ViewPagerActivity.this,
+                getSupportFragmentManager(),
+                FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT));
 
         /*
          * Used to create the layout parameters for Views added to the ViewPager

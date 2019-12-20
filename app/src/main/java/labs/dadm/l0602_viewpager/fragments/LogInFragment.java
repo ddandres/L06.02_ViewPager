@@ -6,7 +6,6 @@ package labs.dadm.l0602_viewpager.fragments;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,6 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import labs.dadm.l0602_viewpager.R;
 
@@ -76,7 +78,7 @@ public class LogInFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         // Update the user name according to the obtained argument
-        EditText etUser = (EditText) view.findViewById(R.id.etUserName);
+        final EditText etUser = view.findViewById(R.id.etUserName);
         etUser.setText(userName);
         return view;
     }
@@ -85,7 +87,7 @@ public class LogInFragment extends Fragment {
      * This method is executed when the activity is created to populate the ActionBar with actions.
      */
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
         // Generate the Menu object from the XML resource file
         inflater.inflate(R.menu.menu_login, menu);
     }

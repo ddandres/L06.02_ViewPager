@@ -6,8 +6,9 @@ package labs.dadm.l0602_viewpager.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import labs.dadm.l0602_viewpager.R;
 

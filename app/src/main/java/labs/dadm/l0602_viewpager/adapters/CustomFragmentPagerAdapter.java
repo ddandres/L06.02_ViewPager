@@ -5,9 +5,11 @@
 package labs.dadm.l0602_viewpager.adapters;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import labs.dadm.l0602_viewpager.R;
 import labs.dadm.l0602_viewpager.fragments.GridImageFragment;
@@ -23,22 +25,20 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private Context context;
 
-    public CustomFragmentPagerAdapter(FragmentManager fm, Context context) {
-        super(fm);
+    public CustomFragmentPagerAdapter(Context context, @NonNull FragmentManager fm, int behavior) {
+        super(fm, behavior);
         this.context = context;
     }
 
     /**
      * Returns the Fragment associated to a given position.
      */
+    @NonNull
     @Override
     public Fragment getItem(int position) {
-        Fragment result = null;
+        Fragment result;
 
         switch (position) {
-            case 0:
-                result = LogInFragment.newInstance("David");
-                break;
             case 1:
                 result = new SignInFragment();
                 break;
@@ -47,6 +47,10 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
                 break;
             case 3:
                 result = new GridImageFragment();
+                break;
+            // Default case includes position == 0
+            default:
+                result = LogInFragment.newInstance("David");
                 break;
         }
         return result;

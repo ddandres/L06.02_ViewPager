@@ -6,8 +6,6 @@ package labs.dadm.l0602_viewpager.fragments;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import labs.dadm.l0602_viewpager.R;
 import labs.dadm.l0602_viewpager.adapters.GridImageAdapter;
@@ -28,7 +30,7 @@ import labs.dadm.l0602_viewpager.adapters.GridImageAdapter;
 public class GridImageFragment extends Fragment {
 
     // Hold reference to the custom grid adapter
-    GridImageAdapter adapter;
+    private GridImageAdapter adapter;
 
     /**
      * Required empty public constructor.
@@ -74,7 +76,7 @@ public class GridImageFragment extends Fragment {
      * This method is executed when the activity is created to populate the ActionBar with actions.
      */
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    public void onCreateOptionsMenu(@NonNull Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_grid, menu);
     }
 
