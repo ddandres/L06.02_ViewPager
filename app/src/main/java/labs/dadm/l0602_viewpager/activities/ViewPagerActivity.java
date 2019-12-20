@@ -63,7 +63,7 @@ public class ViewPagerActivity extends AppCompatActivity {
              * Use a TitleStrip to display the labels. It is not interactive.
              * It is added to the ViewPager by code, although it could also be directly included
              * in the layout as follows:
-             *   <android.support.v4.view.PagerTitleStrip
+             *   <androidx.viewpager.widget.PagerTitleStrip
              *      android:id="@+id/titleStrip"
              *      android:layout_width="match_parent"
              *      android:layout_height="wrap_content" />
@@ -78,7 +78,7 @@ public class ViewPagerActivity extends AppCompatActivity {
              * Use a TabStrip to display the labels. It is interactive.
              * It is added to the ViewPager by code, although it could also be directly included
              * in the layout as follows:
-             *   <android.support.v4.view.PagerTitleStrip
+             *   <androidx.viewpager.widget.PagerTabStrip
              *      android:id="@+id/tabStrip"
              *      android:layout_width="match_parent"
              *      android:layout_height="wrap_content" />
@@ -90,9 +90,10 @@ public class ViewPagerActivity extends AppCompatActivity {
                 break;
 
             /*
-             * Use a TabLayout to display the labels. It is interactive.
-             * It is has been directly included in the layout, but as an invisible component.
-             * */
+             * Use a TabLayout (com.google.android.material.tabs.TabLayout) to display the labels.
+             * It is interactive. It is has been directly included in the layout,
+             * but as an invisible component.
+             */
             case DashboardActivity.TAB_LAYOUT:
                 // Get a reference to the TabLayout component
                 TabLayout tabLayout = findViewById(R.id.tabLayout);
