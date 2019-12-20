@@ -2,8 +2,10 @@
   ~ Copyright (c) 2016. David de Andrés and Juan Carlos Ruiz, DISCA - UPV, Development of apps for mobile devices.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--Component used to display pages and enable the lateral navigation (swipe) between them-->
+<androidx.viewpager.widget.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,20 +15,12 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".activities.ViewPagerActivity">
 
-    <!--Component used to display pages and enable the lateral navigation (swipe) between them-->
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pager"
+    <!--Component used to display the titles of the ViewPager-->
+    <!--Its visibility is set to "gone", so it could be made visible when required-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
-        <!--Component used to display the titles of the ViewPager-->
-        <!--Its visibility is set to "gone", so it could be made visible when required-->
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
-
-    </androidx.viewpager.widget.ViewPager>
-
-</LinearLayout>
+</androidx.viewpager.widget.ViewPager>
