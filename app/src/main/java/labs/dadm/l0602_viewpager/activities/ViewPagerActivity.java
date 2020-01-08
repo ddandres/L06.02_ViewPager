@@ -57,6 +57,7 @@ public class ViewPagerActivity extends AppCompatActivity {
 
             // No labels will be shown
             case DashboardActivity.NO_STRIP:
+                getSupportActionBar().setTitle(R.string.button_view_pager);
                 break;
 
             /*
@@ -69,6 +70,7 @@ public class ViewPagerActivity extends AppCompatActivity {
              *      android:layout_height="wrap_content" />
              * */
             case DashboardActivity.TITLE_STRIP:
+                getSupportActionBar().setTitle(R.string.button_view_pager_title_strip);
                 // Add a TitleStrip to the ViewPager with the required parameters
                 // Titles are provided by the associated PagerAdapter
                 pager.addView(new PagerTitleStrip(this), params);
@@ -84,6 +86,7 @@ public class ViewPagerActivity extends AppCompatActivity {
              *      android:layout_height="wrap_content" />
              * */
             case DashboardActivity.TAB_STRIP:
+                getSupportActionBar().setTitle(R.string.button_view_pager_tab_strip);
                 // Add a TabStrip to the ViewPager with the required parameters
                 // Titles are provided by the associated PagerAdapter
                 pager.addView(new PagerTabStrip(this), params);
@@ -95,6 +98,7 @@ public class ViewPagerActivity extends AppCompatActivity {
              * but as an invisible component.
              */
             case DashboardActivity.TAB_LAYOUT:
+                getSupportActionBar().setTitle(R.string.button_view_pager_tab_layout);
                 // Get a reference to the TabLayout component
                 TabLayout tabLayout = findViewById(R.id.tabLayout);
                 // Make it visible
