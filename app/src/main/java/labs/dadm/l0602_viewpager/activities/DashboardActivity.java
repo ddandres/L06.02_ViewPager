@@ -37,27 +37,19 @@ public class DashboardActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, ViewPagerActivity.class);
         // Determine what to do depending on the Button clicked
-        switch (view.getId()) {
-
+        final int clickedButton = view.getId();
+        if (clickedButton == R.id.bViewPager) {
             // Do not display any title
-            case R.id.bViewPager:
-                intent.putExtra("strip", NO_STRIP);
-                break;
-
+            intent.putExtra("strip", NO_STRIP);
+        } else if (clickedButton == R.id.bViewPagerTitleStrip) {
             // Display titles using a TitleStrip
-            case R.id.bViewPagerTitleStrip:
-                intent.putExtra("strip", TITLE_STRIP);
-                break;
-
+            intent.putExtra("strip", TITLE_STRIP);
+        } else if (clickedButton == R.id.bViewPagerTabStrip) {
             // Display titles using a TabStrip
-            case R.id.bViewPagerTabStrip:
-                intent.putExtra("strip", TAB_STRIP);
-                break;
-
+            intent.putExtra("strip", TAB_STRIP);
+        } else if (clickedButton == R.id.bViewPagerTabLayout) {
             // Display titles using a TableLayout
-            case R.id.bViewPagerTabLayout:
-                intent.putExtra("strip", TAB_LAYOUT);
-                break;
+            intent.putExtra("strip", TAB_LAYOUT);
         }
         // Launch the activity containing the ViewPager
         startActivity(intent);

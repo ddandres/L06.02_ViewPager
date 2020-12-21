@@ -23,7 +23,7 @@ import labs.dadm.l0602_viewpager.fragments.SignInFragment;
  */
 public class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private Context context;
+    final private Context context;
 
     public CustomFragmentPagerAdapter(Context context, @NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);

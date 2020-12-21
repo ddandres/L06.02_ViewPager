@@ -19,9 +19,9 @@ import labs.dadm.l0602_viewpager.R;
 public class GridImageAdapter extends BaseAdapter {
 
     // Hold reference to the Context
-    private Context context;
+    final private Context context;
     // Array of Drawables obtained from a resource
-    private TypedArray images;
+    final private TypedArray images;
 
     /*
      * Gets the required Context and obtains the array of Drawables from a resource.
